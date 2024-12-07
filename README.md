@@ -13,6 +13,14 @@ This document provides a detailed overview of the Flutter-based frontend for the
 The Flutter application serves as the frontend for an ERP system, providing distinct interfaces for **Users**, **Vendors**, and **Admins**. The app uses **Riverpod** for state management, **CachedNetworkImage** for efficient image loading, and is structured using the **MVVM architecture**.
 
 ---
+## **FLows of all USER, ADMIN, VENDOR
+https://github.com/user-attachments/assets/4964cd1a-a363-4cd9-b14b-2748d5432ebf
+
+https://github.com/user-attachments/assets/2fef71d4-f7f3-471f-b647-c84f8d1ca2c8
+
+https://github.com/user-attachments/assets/e511d91d-b4ea-42c5-be2a-9de28e596a48
+
+---
 
 ## **Key Features**
 
