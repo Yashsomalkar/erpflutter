@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../services/auth_service.dart';
+import '../authentication/sign_in_view.dart';
 import 'maintain_user_page.dart';
 import 'maintain_vendor_page.dart';
 
@@ -23,6 +25,13 @@ class _AdminHomePageState extends State<AdminHomePage> {
       appBar: AppBar(
         title: const Text("Admin Panel"),
         automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: const Icon(Icons.logout),
+          onPressed:  ()  async {
+            // Call the logout method, passing the current context
+            await AuthService().logout(context);
+          },
+        ),
       ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(

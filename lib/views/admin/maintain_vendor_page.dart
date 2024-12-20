@@ -109,6 +109,7 @@ class _MaintainVendorPageState extends State<MaintainVendorPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Maintain Vendor"),
+        automaticallyImplyLeading: false,
       ),
       body: ListView.builder(
         itemCount: _vendors.length,

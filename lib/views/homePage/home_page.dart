@@ -23,13 +23,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Signup Portal"),
+        automaticallyImplyLeading: false,
         actions: [
           DropdownButton<String>(
             value: _selectedRole,
             items: _signupViews.keys
                 .map((role) => DropdownMenuItem<String>(
               value: role,
-              child: Text(role),
+              child: Text(role,style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w500)),
             ))
                 .toList(),
             onChanged: (newRole) {

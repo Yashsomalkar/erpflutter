@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../services/auth_service.dart';
 import 'your_item_page.dart'; // Create this file for "Your Item" logic
 import 'add_new_item_page.dart'; // Create this file for "Add New Item" logic
 import 'transaction_page.dart'; // Create this file for "Transaction" logic
@@ -32,9 +33,9 @@ class _VendorMainPageState extends State<VendorMainPage> {
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),
-            onPressed: () {
-              // Navigate back to the sign-in screen
-              Navigator.pop(context);
+            onPressed: ()  async {
+              // Call the logout method, passing the current context
+              await AuthService().logout(context);
             },
           ),
         ],

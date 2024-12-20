@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../services/auth_service.dart';
 import 'cart_screen.dart';
 import 'guest_list_screen.dart';
 import 'order_status_screen.dart';
@@ -33,14 +34,10 @@ class _UserHomeScreenState extends State<UserHomeScreen> {
         title: Text("Welcome ${widget.userName}"),
         leading: IconButton(
           icon: const Icon(Icons.logout),
-          onPressed: () {
-            // Navigate back to login screen
-            Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(builder: (context) => SignInView()),
-                  (route) => false,
-            );
-          },
+          onPressed: ()  async {
+          // Call the logout method, passing the current context
+          await AuthService().logout(context);
+        },
         ),
       ),
       body: _screens[_currentIndex],
